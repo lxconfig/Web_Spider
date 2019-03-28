@@ -10,6 +10,7 @@ class BookSpider(scrapy.Spider):
     def parse(self, response):
         item = DoubanItem()
         item["arts"] = response.xpath('//a[@name="文学"]/@name').extract_first()  # 文学
+        # item["popular"] = response.xpath('//a[@name="流行"]/@name').extract_first()
         # print(item)
         arts_target = response.xpath('//div[@class=""]/div[1]//table[1]/tbody/tr//td')
         # print(arts_target)
