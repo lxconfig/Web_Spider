@@ -18,6 +18,10 @@ class DoubanItem(scrapy.Item):
     econ = scrapy.Field()
     scinece = scrapy.Field()
     name = scrapy.Field()
-    author_info = scrapy.Field()
+    author = scrapy.Field()
+    press = scrapy.Field()
+    price = scrapy.Field()
+    publish_time = scrapy.Field()
     summary = scrapy.Field()
+    href = scrapy.Field()
 
